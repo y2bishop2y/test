@@ -7,43 +7,34 @@
 //
 
 #import "RPGAppDelegate.h"
-#import "RPGViewController.h"
+#import "EAGLView.h"
 
 @implementation RPGAppDelegate
 
 @synthesize window;
-@synthesize viewController;
+@synthesize glView;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+- (void) applicationDidFinishLaunching:(UIApplication *)application
 {
-    [self.window addSubview:self.viewController.view];
-    return YES;
+	[glView startAnimation];
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application
+- (void) applicationWillResignActive:(UIApplication *)application
 {
-    [self.viewController stopAnimation];
+	[glView stopAnimation];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void) applicationDidBecomeActive:(UIApplication *)application
 {
-    [self.viewController startAnimation];
+	[glView startAnimation];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    [self.viewController stopAnimation];
+	[glView stopAnimation];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Handle any background procedures not related to animation here.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Handle any foreground procedures not related to animation here.
-}
 
 - (void)dealloc
 {

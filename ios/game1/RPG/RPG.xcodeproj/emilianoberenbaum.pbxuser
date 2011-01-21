@@ -1,10 +1,33 @@
 // !$*UTF8*$!
 {
+	1D3623240D0F684500981E51 /* RPGAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {560, 373}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 461}";
+		};
+	};
 	1D6058900D05DD3D006BFB54 /* RPG */ = {
 		activeExec = 0;
 		executables = (
 			2A14C92612E829C400103AC6 /* RPG */,
 		);
+	};
+	28FD14FC0DC6FC130079059D /* EAGLView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {698, 572}}";
+			sepNavSelRange = "{1380, 0}";
+			sepNavVisRange = "{0, 950}";
+			sepNavWindowFrame = "{{74, 72}, {734, 780}}";
+		};
+	};
+	28FD14FD0DC6FC130079059D /* EAGLView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {782, 2080}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1185}";
+			sepNavWindowFrame = "{{97, 51}, {734, 780}}";
+		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
@@ -25,7 +48,7 @@
 					20,
 					635,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -40,8 +63,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 317204932;
-			PBXWorkspaceStateSaveDate = 317204932;
+			PBXPerProjectTemplateStateSaveDate = 317270771;
+			PBXWorkspaceStateSaveDate = 317270771;
 		};
 		sourceControlManager = 2A14C93812E829D400103AC6 /* Source Control */;
 		userBuildSettings = {
@@ -98,16 +121,16 @@
 	};
 	2A14C94B12E82B3900103AC6 /* SynthesizeSingleton.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {813, 897}}";
+			sepNavIntBoundsRect = "{{0, 0}, {565, 741}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 801}";
+			sepNavVisRange = "{0, 997}";
 		};
 	};
 	2A14C94C12E82B5D00103AC6 /* Global.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {470, 440}}";
-			sepNavSelRange = "{233, 0}";
-			sepNavVisRange = "{0, 233}";
+			sepNavIntBoundsRect = "{{0, 0}, {560, 496}}";
+			sepNavSelRange = "{204, 0}";
+			sepNavVisRange = "{0, 232}";
 		};
 	};
 	2A14C95012E8B02800103AC6 /* AbstractScene.h */ = {
@@ -137,6 +160,44 @@
 			sepNavIntBoundsRect = "{{0, 0}, {514, 598}}";
 			sepNavSelRange = "{688, 12}";
 			sepNavVisRange = "{144, 586}";
+			sepNavWindowFrame = "{{51, 5}, {737, 868}}";
+		};
+	};
+	2A14C95812E8B4B300103AC6 /* GameController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {560, 507}}";
+			sepNavSelRange = "{860, 0}";
+			sepNavVisRange = "{161, 700}";
+		};
+	};
+	2A14C95912E8B4B300103AC6 /* GameController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {705, 1287}}";
+			sepNavSelRange = "{1630, 0}";
+			sepNavVisRange = "{873, 591}";
+		};
+	};
+	2AA140D312E9442300D197ED /* ES1Renderer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 740}}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{0, 737}";
+			sepNavWindowFrame = "{{51, 5}, {737, 868}}";
+		};
+	};
+	2AA140D412E9442300D197ED /* ES1Renderer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {754, 2015}}";
+			sepNavSelRange = "{3907, 0}";
+			sepNavVisRange = "{2718, 1189}";
+			sepNavWindowFrame = "{{30, 94}, {734, 780}}";
+		};
+	};
+	2AA140D512E9442300D197ED /* ESRenderer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {678, 740}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 345}";
 			sepNavWindowFrame = "{{51, 5}, {737, 868}}";
 		};
 	};

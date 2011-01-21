@@ -13,4 +13,4 @@
 #pragma mark Debug
 
 
-#define SLQLOG(...) NSLog(__VA_ARGS__);
+#define MNLOG(...) NSLog(__VA_ARGS__);

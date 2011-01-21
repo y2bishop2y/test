@@ -1,23 +1,21 @@
 //
 //  EAGLView.m
-//  RPG
+//  Chap03
 //
-//  Created by Emiliano Berenbaum on 1/20/11.
+//  Created by Emiliano Berenbaum on 1/16/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <QuartzCore/QuartzCore.h>
 
 #import "EAGLView.h"
-
-@interface EAGLView (PrivateMethods)
-- (void)createFramebuffer;
-- (void)deleteFramebuffer;
-@end
+#import "ES1Renderer.h"
+#import "GameController.h"
 
 @implementation EAGLView
 
-@dynamic context;
+@synthesize animating;
+@dynamic	animationFrameInterval;
 
 // You must implement this method
 + (Class)layerClass
@@ -38,116 +36,171 @@
                                         [NSNumber numberWithBool:FALSE], kEAGLDrawablePropertyRetainedBacking,
                                         kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat,
                                         nil];
+		
+		renderer = [[ES1Renderer alloc ] init ];
+		
+		if ( !renderer )
+		{
+			[self release];
+			return nil;
+		}
+		animating			   = FALSE;
+		displayLinkSupported   = FALSE;
+		animationFrameInterval = 1;
+		displayLink			   = nil;
+		animationTimer		   = nil;
+		
+		NSString *reqSysVer  = @"3.1";
+		NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+		
+		if ( [currSysVer compare:reqSysVer options: NSNumericSearch ] != NSOrderedAscending) 
+		{
+			displayLinkSupported = TRUE;
+		}
+		// Grab an instance of the shared game controller
+		sharedGameController = [GameController sharedGameController];
     }
-    
     return self;
+}
+
+// The game loop code being used was taken from a tutorial 
+// at http://sacredsoftware.net/tutorials/Animation/TimeBasedAnimation.xhtml
+//
+#define MAXIMUM_FRAME_RATE 45
+#define	MINIMUM_FRAME_RATE 15
+#define UPDATE_INTERVAL	   ( 1.0 / MAXIMUM_FRAME_RATE )
+#define MAX_CYCLES_PER_FRAME ( MAXIMUM_FRAME_RATE / MINIMUM_FRAME_RATE )
+
+- (void)gameLoop
+{
+	static double lastFrameTime  = 0.0f;
+	static double cyclesLeftOver = 0.0f;
+	double currentTime;
+	double updateIterations;
+	
+	// Apple advises to use CACurrentMediaTime() as CFAbsoluteTimeGetCurrent() 
+	// is synced with the movbile network time and so could change causing hiccups.
+	currentTime      = CACurrentMediaTime();
+	
+	updateIterations = ((currentTime - lastFrameTime) + cyclesLeftOver);
+	
+	if ( updateIterations > (MAX_CYCLES_PER_FRAME * UPDATE_INTERVAL)) 
+	{
+		updateIterations = (MAX_CYCLES_PER_FRAME * UPDATE_INTERVAL);
+	}
+	
+	while (updateIterations >= UPDATE_INTERVAL) 
+	{
+		updateIterations -= UPDATE_INTERVAL;
+		
+		// Update the game logic passing in the fixed update interval
+		// as the delta
+		[sharedGameController updateCurrentSceneWithDelta:UPDATE_INTERVAL];
+	}
+	cyclesLeftOver = updateIterations;
+	lastFrameTime  = currentTime;
+	
+	// Render the scene
+	[self drawView:nil];
+}
+
+
+
+-(void) drawView:(id)sender
+{
+	[renderer render];
+}
+
+-(void)layoutSubviews
+{
+	[renderer resizeFromLayer: (CAEAGLLayer*)self.layer];
+	[self drawView:nil];
+}
+
+
+-(NSInteger)animationFrameInterval
+{
+	return animationFrameInterval;
+}
+
+-(void)setAnimationFrameInterval:(NSInteger)frameInterval
+{
+	
+	// Frame interval defines how many display frames must pass between each time the 
+	// display link fires. The display link will only fire 30 times a second when the 
+	// frame interval is two on a display that refreshes 60 times a second. The default
+	// frame interval setting of one will fire 60 times a second when the display refreshes
+	// at 60 times a second. A frame interval setting of less than one results in undefined 
+	// hehavior
+	if (frameInterval >= 1 ) {
+		
+		animationFrameInterval = frameInterval;
+		
+		if ( animating ) 
+		{
+			[self stopAnimation ];
+			[self startAnimation];
+		}
+	}
+}
+
+
+-(void) startAnimation
+{
+	if ( !animating)
+	{
+		if (displayLinkSupported) {
+			// CADsiplayLink is API new to to iphone 3.1. Compiling against earlier veresions 
+			// will result in a warning, but can be dimissed if the system
+			// version runtime check for CADisplayLink exists in -initWithCoder: 
+			// The runtime check ensures this code will not be called 
+			// in system versions earlier than 3.1 
+			
+			displayLink = [NSClassFromString(@"CADisplayLink")displayLinkWithTarget:self 
+															selector:@selector(drawView:)];
+			
+			[displayLink setFrameInterval:animationFrameInterval];
+			[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+			
+			 
+		} else {
+			
+			animationTimer = [NSTimer
+							  scheduledTimerWithTimeInterval:(NSTimeInterval)((1.0 / 60.0) * animationFrameInterval)
+							  target:self
+							  selector:@selector(drawView:)
+							  userInfo:nil
+							  repeats: TRUE ];
+			
+			animating = TRUE;
+		}
+	}
+}
+
+-(void)stopAnimation
+{
+	if (animating)
+	{
+		if(displayLinkSupported)
+		{
+			[displayLink invalidate];
+			displayLink = nil;
+		}
+		else
+		{
+			[animationTimer invalidate];
+			animationTimer = nil;
+		}
+		animating = FALSE;
+	}
 }
 
 - (void)dealloc
 {
-    [self deleteFramebuffer];    
-    [context release];
+	[renderer release];
     
     [super dealloc];
 }
 
-- (EAGLContext *)context
-{
-    return context;
-}
-
-- (void)setContext:(EAGLContext *)newContext
-{
-    if (context != newContext)
-    {
-        [self deleteFramebuffer];
-        
-        [context release];
-        context = [newContext retain];
-        
-        [EAGLContext setCurrentContext:nil];
-    }
-}
-
-- (void)createFramebuffer
-{
-    if (context && !defaultFramebuffer)
-    {
-        [EAGLContext setCurrentContext:context];
-        
-        // Create default framebuffer object.
-        glGenFramebuffers(1, &defaultFramebuffer);
-        glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
-        
-        // Create color render buffer and allocate backing store.
-        glGenRenderbuffers(1, &colorRenderbuffer);
-        glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
-        [context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer *)self.layer];
-        glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &framebufferWidth);
-        glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &framebufferHeight);
-        
-        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, colorRenderbuffer);
-        
-        if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
-            NSLog(@"Failed to make complete framebuffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
-    }
-}
-
-- (void)deleteFramebuffer
-{
-    if (context)
-    {
-        [EAGLContext setCurrentContext:context];
-        
-        if (defaultFramebuffer)
-        {
-            glDeleteFramebuffers(1, &defaultFramebuffer);
-            defaultFramebuffer = 0;
-        }
-        
-        if (colorRenderbuffer)
-        {
-            glDeleteRenderbuffers(1, &colorRenderbuffer);
-            colorRenderbuffer = 0;
-        }
-    }
-}
-
-- (void)setFramebuffer
-{
-    if (context)
-    {
-        [EAGLContext setCurrentContext:context];
-        
-        if (!defaultFramebuffer)
-            [self createFramebuffer];
-        
-        glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
-        
-        glViewport(0, 0, framebufferWidth, framebufferHeight);
-    }
-}
-
-- (BOOL)presentFramebuffer
-{
-    BOOL success = FALSE;
-    
-    if (context)
-    {
-        [EAGLContext setCurrentContext:context];
-        
-        glBindRenderbuffer(GL_RENDERBUFFER, colorRenderbuffer);
-        
-        success = [context presentRenderbuffer:GL_RENDERBUFFER];
-    }
-    
-    return success;
-}
-
-- (void)layoutSubviews
-{
-    // The framebuffer will be re-created at the beginning of the next setFramebuffer method call.
-    [self deleteFramebuffer];
-}
 
 @end

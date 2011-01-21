@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Common.h"
 
-@class RPGViewController;
+@class EAGLView;
 
 @interface RPGAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-    RPGViewController *viewController;
+	EAGLView *glView;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
