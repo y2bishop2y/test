@@ -17,7 +17,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet RPGViewController *viewController;
+@property (nonatomic, retain) IBOutlet EAGLView *glView;
 
 @end
 

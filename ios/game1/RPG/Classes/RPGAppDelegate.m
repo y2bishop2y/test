@@ -38,8 +38,8 @@
 
 - (void)dealloc
 {
-    [viewController release];
-    [window release];
+	[window release];
+    [glView release];
     
     [super dealloc];
 }

@@ -20,6 +20,7 @@
 		2A14C95212E8B02800103AC6 /* AbstractScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95112E8B02800103AC6 /* AbstractScene.m */; };
 		2A14C95A12E8B4B300103AC6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95912E8B4B300103AC6 /* GameController.m */; };
 		2AA140D612E9442300D197ED /* ES1Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA140D412E9442300D197ED /* ES1Renderer.m */; };
+		2AA1413E12E96DFC00D197ED /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95412E8B27000103AC6 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -252,6 +253,7 @@
 				2A14C95212E8B02800103AC6 /* AbstractScene.m in Sources */,
 				2A14C95A12E8B4B300103AC6 /* GameController.m in Sources */,
 				2AA140D612E9442300D197ED /* ES1Renderer.m in Sources */,
+				2AA1413E12E96DFC00D197ED /* GameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

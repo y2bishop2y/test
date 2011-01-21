@@ -23,17 +23,17 @@
 @interface AbstractScene : NSObject {
 
 	CGRect		screenBounds;
-	uint		sceneState;
+	uint        sceneState;
 	GLfloat		sceneAlpha;
-	NSString	*nextSceneKey
+	NSString	*nextSceneKey;
 	float		sceneFadeSpeed;
 }
 
-#parama mark -
+#pragma mark -
 #pragma mark Properties
 
 // This property allows for the scenes state to be altered
-@property (nonatomic, assign) unit sceneState;
+@property (nonatomic, assign) uint sceneState;
 
 // This property allows for the scenes alpah to be changed.
 @property (nonatomic, assign) GLfloat sceneAlpha;

@@ -13,7 +13,7 @@
 #pragma mark -
 #pragma mark Private Interface
 
-@implementation GameController (Private)
+@interface GameController (Private)
 
 // Initialize the game
 - (void)initGame;
@@ -82,7 +82,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameController);
 	// Initialize game scenes
 	gameScenes = [[NSMutableDictionary alloc] initWithCapacity:5];
 	
-	AbstractScene *scene = [[GameScene alloc ] init ];
+	AbstractScene *scene = [[GameScene alloc] init];
 	
 	[gameScenes setValue:scene forKey:@"game" ];
 	[scene release];

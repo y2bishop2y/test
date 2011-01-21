@@ -87,6 +87,9 @@
 		
 		return NO;
 	}
+	// Initialize OpenGL now that the necessary buffers have been created and bound
+	[self initOpenGL];
+	
 	return YES;
 }
 
@@ -122,7 +125,7 @@
 #pragma mark -
 #pragma mark Private implementation
 
-@implementation ES1Renderer (Private0
+@implementation ES1Renderer (Private)
 
 -(void) initOpenGL 
 {
@@ -136,7 +139,7 @@
 	glOrthof(0, backingWidth, 0, backingHeight, -1, 1 );
 	
 	// Set the viewport
-	glViewport(0, 0,, backingWidth, backingHeight);
+	glViewport(0, 0, backingWidth, backingHeight);
 	
 	MNLOG(@"INFO - ES1Renderer: Setting glOrthof to width=%d and height=%d", backingWidth, backingHeight);
 	

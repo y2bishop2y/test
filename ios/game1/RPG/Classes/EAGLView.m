@@ -6,8 +6,6 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-
 #import "EAGLView.h"
 #import "ES1Renderer.h"
 #import "GameController.h"
@@ -138,7 +136,7 @@
 		
 		if ( animating ) 
 		{
-			[self stopAnimation ];
+			[self stopAnimation];
 			[self startAnimation];
 		}
 	}
@@ -147,7 +145,7 @@
 
 -(void) startAnimation
 {
-	if ( !animating)
+	if (!animating)
 	{
 		if (displayLinkSupported) {
 			// CADsiplayLink is API new to to iphone 3.1. Compiling against earlier veresions 
@@ -157,7 +155,7 @@
 			// in system versions earlier than 3.1 
 			
 			displayLink = [NSClassFromString(@"CADisplayLink")displayLinkWithTarget:self 
-															selector:@selector(drawView:)];
+															selector:@selector(gameLoop)];
 			
 			[displayLink setFrameInterval:animationFrameInterval];
 			[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -168,11 +166,14 @@
 			animationTimer = [NSTimer
 							  scheduledTimerWithTimeInterval:(NSTimeInterval)((1.0 / 60.0) * animationFrameInterval)
 							  target:self
-							  selector:@selector(drawView:)
+							  selector:@selector(gameLoop)
 							  userInfo:nil
 							  repeats: TRUE ];
 			
 			animating = TRUE;
+			
+			// Setup the lastTime ivar
+			lastTime = CFAbsoluteTimeGetCurrent();
 		}
 	}
 }
