@@ -8,6 +8,9 @@
 #import "AbstractScene.h"
 #import "Global.h"
 
+@class Image;
+@class ImageRenderManager;
+
 
 @interface GameScene : AbstractScene {
 	float transY;

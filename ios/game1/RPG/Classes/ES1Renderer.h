@@ -9,7 +9,7 @@
 #import "ESRenderer.h"
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
-#import "Common.h"
+#import "Global.h"
 
 @class GameController;
 

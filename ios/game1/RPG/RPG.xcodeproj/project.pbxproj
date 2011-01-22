@@ -19,6 +19,7 @@
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		2A14C95212E8B02800103AC6 /* AbstractScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95112E8B02800103AC6 /* AbstractScene.m */; };
 		2A14C95A12E8B4B300103AC6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95912E8B4B300103AC6 /* GameController.m */; };
+		2A94AFEB12EACEDE0089C65C /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94AFEA12EACEDE0089C65C /* Image.m */; };
 		2AA140D612E9442300D197ED /* ES1Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA140D412E9442300D197ED /* ES1Renderer.m */; };
 		2AA1413E12E96DFC00D197ED /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95412E8B27000103AC6 /* GameScene.m */; };
 /* End PBXBuildFile section */
@@ -37,7 +38,6 @@
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2A14C94212E82A4800103AC6 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		2A14C94B12E82B3900103AC6 /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		2A14C94C12E82B5D00103AC6 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		2A14C95012E8B02800103AC6 /* AbstractScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractScene.h; sourceTree = "<group>"; };
@@ -46,6 +46,10 @@
 		2A14C95412E8B27000103AC6 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		2A14C95812E8B4B300103AC6 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		2A14C95912E8B4B300103AC6 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		2A94AFAD12EAC7780089C65C /* Structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structures.h; sourceTree = "<group>"; };
+		2A94AFE512EACD4A0089C65C /* Transform2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform2D.h; sourceTree = "<group>"; };
+		2A94AFE912EACEDE0089C65C /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		2A94AFEA12EACEDE0089C65C /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
 		2AA140D312E9442300D197ED /* ES1Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES1Renderer.h; sourceTree = "<group>"; };
 		2AA140D412E9442300D197ED /* ES1Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES1Renderer.m; sourceTree = "<group>"; };
 		2AA140D512E9442300D197ED /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				2A94AFB812EAC8C80089C65C /* Game Engine */,
+				2A94AFB612EAC8940089C65C /* Game Resources */,
 				2A14C94F12E8AFF200103AC6 /* Game Scenes */,
 				2A14C94E12E8AFE700103AC6 /* Game Controller */,
 				2A14C94D12E8AFD900103AC6 /* Abstract Classes */,
@@ -149,8 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				2A14C94B12E82B3900103AC6 /* SynthesizeSingleton.h */,
-				2A14C94212E82A4800103AC6 /* Common.h */,
 				2A14C94C12E82B5D00103AC6 /* Global.h */,
+				2A94AFAD12EAC7780089C65C /* Structures.h */,
+				2A94AFE512EACD4A0089C65C /* Transform2D.h */,
 			);
 			name = "Global Headers";
 			sourceTree = "<group>";
@@ -180,6 +187,54 @@
 				2A14C95412E8B27000103AC6 /* GameScene.m */,
 			);
 			name = "Game Scenes";
+			sourceTree = "<group>";
+		};
+		2A94AFB612EAC8940089C65C /* Game Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A94AFB712EAC89C0089C65C /* Image */,
+			);
+			name = "Game Resources";
+			sourceTree = "<group>";
+		};
+		2A94AFB712EAC89C0089C65C /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		2A94AFB812EAC8C80089C65C /* Game Engine */ = {
+			isa = PBXGroup;
+			children = (
+				2A94AFBA12EAC8F00089C65C /* Managers */,
+				2A94AFB912EAC8D80089C65C /* Image */,
+			);
+			name = "Game Engine";
+			sourceTree = "<group>";
+		};
+		2A94AFB912EAC8D80089C65C /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2A94AFED12EADC680089C65C /* Texture2D */,
+				2A94AFE912EACEDE0089C65C /* Image.h */,
+				2A94AFEA12EACEDE0089C65C /* Image.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		2A94AFBA12EAC8F00089C65C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		2A94AFED12EADC680089C65C /* Texture2D */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Texture2D;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +309,7 @@
 				2A14C95A12E8B4B300103AC6 /* GameController.m in Sources */,
 				2AA140D612E9442300D197ED /* ES1Renderer.m in Sources */,
 				2AA1413E12E96DFC00D197ED /* GameScene.m in Sources */,
+				2A94AFEB12EACEDE0089C65C /* Image.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
