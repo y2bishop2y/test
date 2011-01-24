@@ -79,7 +79,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ImageRenderManager);
 - (void)addImageDetailsToRenderQueue:(ImageDetails *)aImageDetails
 {
 	// Copy the imageDetails to the render managers IVA
-	[self copyIMageDetails : aImageDetails];
+	[self copyImageDetails : aImageDetails];
 	
 	// Add the textures used for this image to the list of textures to be rendered
 	[self addToTextureList:aImageDetails->textureName];
@@ -177,7 +177,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ImageRenderManager);
 		   sizeof(TexturedColoredQuad) );
 }
 
-- (void)addToTexturedList:(uint)aTextureName
+- (void)addToTextureList:(uint)aTextureName
 {
 	// Check to see if the texture for this image has already been added to the queue
 	BOOL textureFound = NO;

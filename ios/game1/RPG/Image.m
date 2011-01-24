@@ -78,6 +78,12 @@
 	[super dealloc];
 }
 
+#pragma mark -
+#pragma mark Initializers
 
+- (id) initWithImageNamed:(NSString *)aName filter:(GLenum)aFilter
+{
+	
+}
 
 @end

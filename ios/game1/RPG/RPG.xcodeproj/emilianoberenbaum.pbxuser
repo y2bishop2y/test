@@ -156,6 +156,10 @@
 			2A94B09F12ED775C0089C65C /* PBXTextBookmark */ = 2A94B09F12ED775C0089C65C /* PBXTextBookmark */;
 			2A94B0A012ED775C0089C65C /* XCBuildMessageTextBookmark */ = 2A94B0A012ED775C0089C65C /* XCBuildMessageTextBookmark */;
 			2A94B0A112ED775C0089C65C /* PBXTextBookmark */ = 2A94B0A112ED775C0089C65C /* PBXTextBookmark */;
+			2A94B0A512ED836C0089C65C /* PBXTextBookmark */ = 2A94B0A512ED836C0089C65C /* PBXTextBookmark */;
+			2A94B0AB12ED83B70089C65C /* PBXTextBookmark */ = 2A94B0AB12ED83B70089C65C /* PBXTextBookmark */;
+			2A94B0AC12ED83B70089C65C /* XCBuildMessageTextBookmark */ = 2A94B0AC12ED83B70089C65C /* XCBuildMessageTextBookmark */;
+			2A94B0AD12ED83B70089C65C /* PBXTextBookmark */ = 2A94B0AD12ED83B70089C65C /* PBXTextBookmark */;
 			2AA1410512E9643F00D197ED = 2AA1410512E9643F00D197ED /* PBXTextBookmark */;
 			2AA1412012E9653700D197ED = 2AA1412012E9653700D197ED /* PBXTextBookmark */;
 			2AA1412112E9653700D197ED = 2AA1412112E9653700D197ED /* PBXTextBookmark */;
@@ -401,16 +405,16 @@
 	};
 	2A94AFEA12EACEDE0089C65C /* Image.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {854, 1144}}";
-			sepNavSelRange = "{1760, 0}";
-			sepNavVisRange = "{1530, 235}";
+			sepNavIntBoundsRect = "{{0, 0}, {760, 1118}}";
+			sepNavSelRange = "{1422, 0}";
+			sepNavVisRange = "{1014, 853}";
 			sepNavWindowFrame = "{{96, 46}, {869, 785}}";
 		};
 	};
 	2A94B00D12EC12BF0089C65C /* Texture2D.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {760, 884}}";
-			sepNavSelRange = "{1669, 0}";
+			sepNavSelRange = "{978, 0}";
 			sepNavVisRange = "{0, 1706}";
 		};
 	};
@@ -445,9 +449,10 @@
 	};
 	2A94B05F12ED55AA0089C65C /* ImageRenderManager.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {854, 2938}}";
-			sepNavSelRange = "{1164, 0}";
-			sepNavVisRange = "{939, 408}";
+			sepNavIntBoundsRect = "{{0, 0}, {887, 2652}}";
+			sepNavSelRange = "{7027, 0}";
+			sepNavVisRange = "{6475, 558}";
+			sepNavWindowFrame = "{{1733, 3}, {869, 785}}";
 		};
 	};
 	2A94B07612ED75DF0089C65C /* PBXTextBookmark */ = {
@@ -514,7 +519,7 @@
 		fRef = 2A94AFEA12EACEDE0089C65C /* Image.m */;
 		name = "Image.m: 83";
 		rLen = 0;
-		rLoc = 1760;
+		rLoc = 1874;
 		rType = 0;
 		vrLen = 235;
 		vrLoc = 1530;
@@ -653,7 +658,7 @@
 		fRef = 2A94B05F12ED55AA0089C65C /* ImageRenderManager.m */;
 		name = "ImageRenderManager.m: 202";
 		rLen = 0;
-		rLoc = 7023;
+		rLoc = 7022;
 		rType = 0;
 		vrLen = 1890;
 		vrLoc = 4413;
@@ -686,6 +691,45 @@
 		rType = 0;
 		vrLen = 1706;
 		vrLoc = 0;
+	};
+	2A94B0A512ED836C0089C65C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2A94B04812EC2C100089C65C /* TextureManager.m */;
+		name = "TextureManager.m: 74";
+		rLen = 0;
+		rLoc = 2086;
+		rType = 0;
+		vrLen = 582;
+		vrLoc = 1618;
+	};
+	2A94B0AB12ED83B70089C65C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2A94B04812EC2C100089C65C /* TextureManager.m */;
+		name = "TextureManager.m: 74";
+		rLen = 0;
+		rLoc = 2086;
+		rType = 0;
+		vrLen = 582;
+		vrLoc = 1618;
+	};
+	2A94B0AC12ED83B70089C65C /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Method definition for '-addToTextureList:' not found";
+		fRef = 2A94B05F12ED55AA0089C65C /* ImageRenderManager.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 205;
+		rType = 1;
+	};
+	2A94B0AD12ED83B70089C65C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2A94B05F12ED55AA0089C65C /* ImageRenderManager.m */;
+		name = "ImageRenderManager.m: 206";
+		rLen = 0;
+		rLoc = 7027;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 6475;
 	};
 	2AA140D312E9442300D197ED /* ES1Renderer.h */ = {
 		uiCtxt = {
