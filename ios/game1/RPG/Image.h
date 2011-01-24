@@ -33,7 +33,7 @@
 @interface Image : NSObject {
 
 	// Singleton Managers
-	TextureManage		*textureManager;		
+	TextureManager		*textureManager;		
 	GameController		*sharedGameController;
 	ImageRenderManager	*sharedImageRenderManager;
 	
