@@ -137,11 +137,11 @@
 
 - (void) renderAtPoint:(CGPoint)aPoint scale:(Scale2f)aScale rotation:(float)aRotation;
 
-- (void)renderAtCenter;
+- (void)renderCentered;
 
-- (void)renderCenterAtPoint:(CGPoint)aPoint;
+- (void)renderCenteredAtPoint:(CGPoint)aPoint;
 
-- (void)renderCenteredAtPointP:(CGPoint)aPoint scale:(Scale2f) rotation:(float)aRotation;
+- (void)renderCenteredAtPoint:(CGPoint)aPoint scale:(Scale2f)aScale rotation:(float)aRotation;
 
 
 @end

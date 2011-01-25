@@ -71,7 +71,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(TextureManager);
 
 - (void)releaseAllTextures
 {
-	MNLog( @"INFO - Resource Manager: Releasing all cached textures." );
+	MNLOG( @"INFO - Resource Manager: Releasing all cached textures." );
 	[cachedTextures removeAllObjects];
 }
 
