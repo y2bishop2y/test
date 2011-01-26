@@ -10,6 +10,7 @@
 
 @class Image;
 @class ImageRenderManager;
+@class PackedSpirteSheet;
 @class SpriteSheet;
 
 
@@ -19,10 +20,11 @@
 	Image *myImage1;
 	Image *myImage2;
 	
-	ImageRenderManager *sharedImageRenderManager;
+	ImageRenderManager	*sharedImageRenderManager;
 	float scaleAmount;
 	
-	SpriteSheet *spriteSheet;
+	PackedSpirteSheet	*packedSpriteSheet;
+	SpriteSheet			*spriteSheet;
 	
 }
 

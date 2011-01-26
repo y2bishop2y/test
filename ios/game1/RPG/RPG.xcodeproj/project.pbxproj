@@ -25,6 +25,7 @@
 		2A8C8B9212F003B7002E64A1 /* player_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8E12F003B7002E64A1 /* player_spritesheet.png */; };
 		2A8C8B9312F003B7002E64A1 /* ghost_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8F12F003B7002E64A1 /* ghost_spritesheet.png */; };
 		2A8C8BB612F006D4002E64A1 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C8BB512F006D4002E64A1 /* SpriteSheet.m */; };
+		2A8C8C9212F0B48C002E64A1 /* PackedSpirteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C8C9112F0B48C002E64A1 /* PackedSpirteSheet.m */; };
 		2A94AFEB12EACEDE0089C65C /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94AFEA12EACEDE0089C65C /* Image.m */; };
 		2A94B00F12EC12BF0089C65C /* Texture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94B00E12EC12BF0089C65C /* Texture2D.m */; };
 		2A94B04912EC2C100089C65C /* TextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94B04812EC2C100089C65C /* TextureManager.m */; };
@@ -62,6 +63,8 @@
 		2A8C8B8F12F003B7002E64A1 /* ghost_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost_spritesheet.png; sourceTree = "<group>"; };
 		2A8C8BB412F006D4002E64A1 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
 		2A8C8BB512F006D4002E64A1 /* SpriteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheet.m; sourceTree = "<group>"; };
+		2A8C8C9012F0B48C002E64A1 /* PackedSpirteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackedSpirteSheet.h; sourceTree = "<group>"; };
+		2A8C8C9112F0B48C002E64A1 /* PackedSpirteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackedSpirteSheet.m; sourceTree = "<group>"; };
 		2A94AFAD12EAC7780089C65C /* Structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structures.h; sourceTree = "<group>"; };
 		2A94AFE512EACD4A0089C65C /* Transform2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform2D.h; sourceTree = "<group>"; };
 		2A94AFE912EACEDE0089C65C /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 			children = (
 				2A8C8BB412F006D4002E64A1 /* SpriteSheet.h */,
 				2A8C8BB512F006D4002E64A1 /* SpriteSheet.m */,
+				2A8C8C9012F0B48C002E64A1 /* PackedSpirteSheet.h */,
+				2A8C8C9112F0B48C002E64A1 /* PackedSpirteSheet.m */,
 			);
 			name = "Sprite Sheet";
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				2A94B04912EC2C100089C65C /* TextureManager.m in Sources */,
 				2A94B06012ED55AA0089C65C /* ImageRenderManager.m in Sources */,
 				2A8C8BB612F006D4002E64A1 /* SpriteSheet.m in Sources */,
+				2A8C8C9212F0B48C002E64A1 /* PackedSpirteSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

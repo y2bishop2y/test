@@ -10,6 +10,7 @@
 #import "Image.h"
 #import "ImageRenderManager.h"
 #import "SpriteSheet.h"
+#import "PackedSpirteSheet.h"
 
 @implementation GameScene
 
@@ -18,6 +19,7 @@
 	[myImage  release];
 	[myImage1 release];
 	[myImage2 release];
+	[packedSpriteSheet release];
 	[spriteSheet release];
 	
 	[super dealloc];
@@ -35,11 +37,13 @@
 		// the scale or the image by 3 per second
 		scaleAmount = 3;
 		
-//		spriteSheet = [SpriteSheet spriteSheetForImageNamed:@"player_spritesheet" 
-//												 aSpriteSize:CGSizeMake(40,40) spacing:0 marging:0 filter:GL_NEAREST];
+		packedSpriteSheet = [[PackedSpirteSheet alloc] initWithImageNamed:@"atlas.png" controlFile:@"coordinates" filter:GL_NEAREST];
 		
+		Image *spriteSheetImage = [packedSpriteSheet imageForKey:@"player_spritesheet.png" ];
 		
-		spriteSheet = [SpriteSheet spriteSheetFromImageNamed:@"player_spritesheet.png" spriteSize:CGSizeMake(40,40) spacing:0 margin:0 imageFilter:GL_NEAREST ];
+		spriteSheet = [SpriteSheet spriteSheetForImage:spriteSheetImage sheetKey:@"spriteSheet" spriteSize:CGSizeMake(40,40) spacing:0 marging:0 ];
+
+		// spriteSheet = [SpriteSheet spriteSheetFromImageNamed:@"player_spritesheet.png" spriteSize:CGSizeMake(40,40) spacing:0 margin:0 imageFilter:GL_NEAREST ];
 		
 		// Create three images by taking three different images from the sprite sheet
 		
