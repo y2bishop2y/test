@@ -68,7 +68,7 @@
 
 // Method to add a TexturedColoredQuad to the render queue.  This allows image information to be added to the
 // queue without the need for an Image instance.  This is used in classes such as TileMap.
-- (void)addTextureColoredQuadToRenderQueue:(TexturedColoredQuad*)aTCQ texture:(uint)aTexture;
+- (void)addTexturedColoredQuadToRenderQueue:(TexturedColoredQuad*)aTCQ texture:(uint)aTexture;
 
 // Method used to render all images which have been placed on the render queue using 
 // [addToRenderQueue].

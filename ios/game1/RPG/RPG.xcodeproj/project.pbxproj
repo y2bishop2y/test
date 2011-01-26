@@ -24,6 +24,7 @@
 		2A8C8B9112F003B7002E64A1 /* atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8D12F003B7002E64A1 /* atlas.png */; };
 		2A8C8B9212F003B7002E64A1 /* player_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8E12F003B7002E64A1 /* player_spritesheet.png */; };
 		2A8C8B9312F003B7002E64A1 /* ghost_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8F12F003B7002E64A1 /* ghost_spritesheet.png */; };
+		2A8C8BB612F006D4002E64A1 /* SpriteSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C8BB512F006D4002E64A1 /* SpriteSheet.m */; };
 		2A94AFEB12EACEDE0089C65C /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94AFEA12EACEDE0089C65C /* Image.m */; };
 		2A94B00F12EC12BF0089C65C /* Texture2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94B00E12EC12BF0089C65C /* Texture2D.m */; };
 		2A94B04912EC2C100089C65C /* TextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94B04812EC2C100089C65C /* TextureManager.m */; };
@@ -59,6 +60,8 @@
 		2A8C8B8D12F003B7002E64A1 /* atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atlas.png; sourceTree = "<group>"; };
 		2A8C8B8E12F003B7002E64A1 /* player_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_spritesheet.png; sourceTree = "<group>"; };
 		2A8C8B8F12F003B7002E64A1 /* ghost_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost_spritesheet.png; sourceTree = "<group>"; };
+		2A8C8BB412F006D4002E64A1 /* SpriteSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteSheet.h; sourceTree = "<group>"; };
+		2A8C8BB512F006D4002E64A1 /* SpriteSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpriteSheet.m; sourceTree = "<group>"; };
 		2A94AFAD12EAC7780089C65C /* Structures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Structures.h; sourceTree = "<group>"; };
 		2A94AFE512EACD4A0089C65C /* Transform2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform2D.h; sourceTree = "<group>"; };
 		2A94AFE912EACEDE0089C65C /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -210,6 +213,15 @@
 			name = "Game Scenes";
 			sourceTree = "<group>";
 		};
+		2A8C8BB312F006C5002E64A1 /* Sprite Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				2A8C8BB412F006D4002E64A1 /* SpriteSheet.h */,
+				2A8C8BB512F006D4002E64A1 /* SpriteSheet.m */,
+			);
+			name = "Sprite Sheet";
+			sourceTree = "<group>";
+		};
 		2A94AFB612EAC8940089C65C /* Game Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +244,7 @@
 		2A94AFB812EAC8C80089C65C /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				2A8C8BB312F006C5002E64A1 /* Sprite Sheet */,
 				2A94AFBA12EAC8F00089C65C /* Managers */,
 				2A94AFB912EAC8D80089C65C /* Image */,
 			);
@@ -364,6 +377,7 @@
 				2A94B00F12EC12BF0089C65C /* Texture2D.m in Sources */,
 				2A94B04912EC2C100089C65C /* TextureManager.m in Sources */,
 				2A94B06012ED55AA0089C65C /* ImageRenderManager.m in Sources */,
+				2A8C8BB612F006D4002E64A1 /* SpriteSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

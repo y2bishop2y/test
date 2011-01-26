@@ -10,15 +10,19 @@
 
 @class Image;
 @class ImageRenderManager;
+@class SpriteSheet;
 
 
 @interface GameScene : AbstractScene {
 	float  transY;
 	Image *myImage;
 	Image *myImage1;
+	Image *myImage2;
+	
 	ImageRenderManager *sharedImageRenderManager;
 	float scaleAmount;
 	
+	SpriteSheet *spriteSheet;
 	
 }
 
