@@ -128,7 +128,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(ImageRenderManager);
 			NSUInteger index = textureIndices[texturesToRender[textureIndex]][imageIndex] * 4;
 
             ivaIndices[vertexCounter++] = index;     // Bottom left
-            ivaIndices[vertexCounter++] = index+2;   // Top Left
+            ivaIndices[vertexCounter++] = index+2;   // Top Left
             ivaIndices[vertexCounter++] = index+1;   // Bottom right
             ivaIndices[vertexCounter++] = index+1;   // Bottom right
             ivaIndices[vertexCounter++] = index+2;   // Top left

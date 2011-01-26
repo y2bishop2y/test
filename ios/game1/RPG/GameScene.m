@@ -33,8 +33,8 @@
 
 - (void) updateSceneWithDelta:(float)aDelta 
 {
-	float xScale = myImage.scale.x + scaleAmount + aDelta;
-	float yScale = myImage.scale.y + scaleAmount + aDelta;
+	float xScale = myImage.scale.x + scaleAmount * aDelta;
+	float yScale = myImage.scale.y + scaleAmount * aDelta;
 	
 	myImage.scale = Scale2fMake(xScale, yScale);
 	myImage.rotationPoint = CGPointMake( 45 * myImage.scale.x, 15 * myImage.scale.y );
@@ -42,7 +42,7 @@
 	
 	if ( myImage.scale.x >= 5 || myImage.scale.x <= 1 ) {
 		
-		scaleAmount += -1;
+		scaleAmount *= -1;
 	}
 	
 	
