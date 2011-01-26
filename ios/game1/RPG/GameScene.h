@@ -13,12 +13,13 @@
 
 
 @interface GameScene : AbstractScene {
-	float  transY;
-	Image *myImage;
-	Image *myImage1;
-	ImageRenderManager *sharedImageRenderManager;
-	float scaleAmount;
-	
+	float				transY;
+	Image				*myImage;
+	Image				*myImage1;
+	ImageRenderManager	*sharedImageRenderManager;
+	float				scaleAmount;
+	CGPoint				velocity;
+	CGPoint				point;
 	
 }
 
