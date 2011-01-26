@@ -148,6 +148,10 @@
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	
+	// Setup how textures should be rendered i.e. how a texture with alpha should 
+	// be rendered onto of another texture
+	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_ALPHA);
+	
 	// Set the color to use when clearing the screen with glClear
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f	);
 	
@@ -159,6 +163,10 @@
 	// Enable the OpenGL States we are going to be using when rendering
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glEnableClientState(GL_COLOR_ARRAY);
+	glEnable(GL_TEXTURE_2D);
+	glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnable(GL_BLEND);
 }
 
 
