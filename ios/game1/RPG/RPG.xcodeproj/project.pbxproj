@@ -32,6 +32,7 @@
 		2A94B06012ED55AA0089C65C /* ImageRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94B05F12ED55AA0089C65C /* ImageRenderManager.m */; };
 		2AA140D612E9442300D197ED /* ES1Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA140D412E9442300D197ED /* ES1Renderer.m */; };
 		2AA1413E12E96DFC00D197ED /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95412E8B27000103AC6 /* GameScene.m */; };
+		2AD7D75B12F260620030BD54 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD7D75A12F260620030BD54 /* Animation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,8 @@
 		2AA140D312E9442300D197ED /* ES1Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ES1Renderer.h; sourceTree = "<group>"; };
 		2AA140D412E9442300D197ED /* ES1Renderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ES1Renderer.m; sourceTree = "<group>"; };
 		2AA140D512E9442300D197ED /* ESRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESRenderer.h; sourceTree = "<group>"; };
+		2AD7D75912F260620030BD54 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		2AD7D75A12F260620030BD54 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* RPG_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPG_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* RPG-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RPG-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,6 +252,7 @@
 		2A94AFB812EAC8C80089C65C /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				2AD7D75512F260480030BD54 /* Animation */,
 				2A8C8BB312F006C5002E64A1 /* Sprite Sheet */,
 				2A94AFBA12EAC8F00089C65C /* Managers */,
 				2A94AFB912EAC8D80089C65C /* Image */,
@@ -300,6 +304,15 @@
 				2A94B05F12ED55AA0089C65C /* ImageRenderManager.m */,
 			);
 			name = "Image Render Manager";
+			sourceTree = "<group>";
+		};
+		2AD7D75512F260480030BD54 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				2AD7D75912F260620030BD54 /* Animation.h */,
+				2AD7D75A12F260620030BD54 /* Animation.m */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +397,7 @@
 				2A94B06012ED55AA0089C65C /* ImageRenderManager.m in Sources */,
 				2A8C8BB612F006D4002E64A1 /* SpriteSheet.m in Sources */,
 				2A8C8C9212F0B48C002E64A1 /* PackedSpirteSheet.m in Sources */,
+				2AD7D75B12F260620030BD54 /* Animation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

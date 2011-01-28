@@ -54,6 +54,11 @@ typedef struct {
 	
 } ImageDetails;
 
+// Stores a single frame of an animation which is used within the Animation class
+typedef struct {
+    Image *image;
+    float delay;
+} AnimationFrame;
 
 
 
