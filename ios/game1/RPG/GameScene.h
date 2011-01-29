@@ -12,6 +12,7 @@
 @class ImageRenderManager;
 @class PackedSpirteSheet;
 @class SpriteSheet;
+@class Animation;
 
 
 @interface GameScene : AbstractScene {
@@ -25,6 +26,9 @@
 	
 	PackedSpirteSheet	*packedSpriteSheet;
 	SpriteSheet			*spriteSheet;
+	
+	Animation			*ghostAnim;
+	Animation			*playerAnim;
 	
 }
 
