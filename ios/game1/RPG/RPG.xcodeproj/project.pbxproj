@@ -20,6 +20,10 @@
 		2A14C95212E8B02800103AC6 /* AbstractScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95112E8B02800103AC6 /* AbstractScene.m */; };
 		2A14C95A12E8B4B300103AC6 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A14C95912E8B4B300103AC6 /* GameController.m */; };
 		2A28696012EED82C0059D6B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A28695F12EED82C0059D6B3 /* CoreGraphics.framework */; };
+		2A4127BF12F7D63400C28783 /* nemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4127BE12F7D63400C28783 /* nemo.png */; };
+		2A4127E812F7DC3500C28783 /* testFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4127E612F7DC3500C28783 /* testFont.png */; };
+		2A4127E912F7DC3500C28783 /* testFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 2A4127E712F7DC3500C28783 /* testFont.fnt */; };
+		2A4127F412F7DFAD00C28783 /* BitmapFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4127F312F7DFAD00C28783 /* BitmapFont.m */; };
 		2A8C8B9012F003B7002E64A1 /* coordinates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8C12F003B7002E64A1 /* coordinates.plist */; };
 		2A8C8B9112F003B7002E64A1 /* atlas.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8D12F003B7002E64A1 /* atlas.png */; };
 		2A8C8B9212F003B7002E64A1 /* player_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C8B8E12F003B7002E64A1 /* player_spritesheet.png */; };
@@ -58,6 +62,11 @@
 		2A14C95812E8B4B300103AC6 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
 		2A14C95912E8B4B300103AC6 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 		2A28695F12EED82C0059D6B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2A4127BE12F7D63400C28783 /* nemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nemo.png; sourceTree = "<group>"; };
+		2A4127E612F7DC3500C28783 /* testFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testFont.png; sourceTree = "<group>"; };
+		2A4127E712F7DC3500C28783 /* testFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testFont.fnt; sourceTree = "<group>"; };
+		2A4127F212F7DFAD00C28783 /* BitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitmapFont.h; sourceTree = "<group>"; };
+		2A4127F312F7DFAD00C28783 /* BitmapFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitmapFont.m; sourceTree = "<group>"; };
 		2A8C8B8C12F003B7002E64A1 /* coordinates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = coordinates.plist; sourceTree = "<group>"; };
 		2A8C8B8D12F003B7002E64A1 /* atlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atlas.png; sourceTree = "<group>"; };
 		2A8C8B8E12F003B7002E64A1 /* player_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player_spritesheet.png; sourceTree = "<group>"; };
@@ -219,6 +228,24 @@
 			name = "Game Scenes";
 			sourceTree = "<group>";
 		};
+		2A4127E512F7DC1200C28783 /* Bitman Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2A4127E612F7DC3500C28783 /* testFont.png */,
+				2A4127E712F7DC3500C28783 /* testFont.fnt */,
+			);
+			name = "Bitman Fonts";
+			sourceTree = "<group>";
+		};
+		2A4127F012F7DF8700C28783 /* Bitman Font */ = {
+			isa = PBXGroup;
+			children = (
+				2A4127F212F7DFAD00C28783 /* BitmapFont.h */,
+				2A4127F312F7DFAD00C28783 /* BitmapFont.m */,
+			);
+			name = "Bitman Font";
+			sourceTree = "<group>";
+		};
 		2A8C8BB312F006C5002E64A1 /* Sprite Sheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +260,7 @@
 		2A94AFB612EAC8940089C65C /* Game Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A4127E512F7DC1200C28783 /* Bitman Fonts */,
 				2A94AFB712EAC89C0089C65C /* Image */,
 			);
 			name = "Game Resources";
@@ -241,6 +269,7 @@
 		2A94AFB712EAC89C0089C65C /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				2A4127BE12F7D63400C28783 /* nemo.png */,
 				2A8C8B8C12F003B7002E64A1 /* coordinates.plist */,
 				2A8C8B8D12F003B7002E64A1 /* atlas.png */,
 				2A8C8B8E12F003B7002E64A1 /* player_spritesheet.png */,
@@ -252,6 +281,7 @@
 		2A94AFB812EAC8C80089C65C /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				2A4127F012F7DF8700C28783 /* Bitman Font */,
 				2AD7D75512F260480030BD54 /* Animation */,
 				2A8C8BB312F006C5002E64A1 /* Sprite Sheet */,
 				2A94AFBA12EAC8F00089C65C /* Managers */,
@@ -374,6 +404,9 @@
 				2A8C8B9112F003B7002E64A1 /* atlas.png in Resources */,
 				2A8C8B9212F003B7002E64A1 /* player_spritesheet.png in Resources */,
 				2A8C8B9312F003B7002E64A1 /* ghost_spritesheet.png in Resources */,
+				2A4127BF12F7D63400C28783 /* nemo.png in Resources */,
+				2A4127E812F7DC3500C28783 /* testFont.png in Resources */,
+				2A4127E912F7DC3500C28783 /* testFont.fnt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +431,7 @@
 				2A8C8BB612F006D4002E64A1 /* SpriteSheet.m in Sources */,
 				2A8C8C9212F0B48C002E64A1 /* PackedSpirteSheet.m in Sources */,
 				2AD7D75B12F260620030BD54 /* Animation.m in Sources */,
+				2A4127F412F7DFAD00C28783 /* BitmapFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

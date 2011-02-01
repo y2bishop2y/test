@@ -109,7 +109,7 @@ static NSMutableDictionary *cachedSpriteSheets = nil;
 }
 
 -(id) initWithImageNamed:(NSString *)aImageFileName spriteSize:(CGSize)aSpriteSize spacing:(NSUInteger)aSpacing 
-				  margin:(NSUInteger)aMarging imageFilter:(GLenum)aFilter
+				  margin:(NSUInteger)aMargin imageFilter:(GLenum)aFilter
 {
 	// Call the IMage classes designated initializer so that the image we are going
 	// to use for  the sprite sheet is setup along with all the image properties
@@ -123,7 +123,7 @@ static NSMutableDictionary *cachedSpriteSheets = nil;
 		// Sprite size and spacing
 		spriteSize = aSpriteSize;
 		spacing	   = aSpacing;
-		margin     = 0;
+		margin     = aMargin;
 		
 		// Cached the sprites that are included within the sprite sheet
 		[self cacheSprites];

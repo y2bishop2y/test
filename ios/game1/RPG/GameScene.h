@@ -29,6 +29,7 @@
 	
 	Animation			*ghostAnim;
 	Animation			*playerAnim;
+	Animation			*nemoAnim;
 	
 }
 

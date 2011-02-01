@@ -116,9 +116,28 @@
 		playerAnim.state = kAnimationState_Running;
 		playerAnim.type  = kAnimationType_Repeating;
 		
+		
+		// Nemo animation 
+		SpriteSheet *nemoSprites = [SpriteSheet spriteSheetFromImageNamed:@"nemo" spriteSize:CGSizeMake(60,60) spacing:0 margin:0 imageFilter:GL_NEAREST ];
+		
+		/*
+		nemoAnim = [[Animation alloc ] init ];
+		
+		delay = 0.2f;
+		
+		[nemoAnim addFrameWithImage:[playerSprites spriteImageAtCoords:CGPointMake(1, 0) ] delay:delay];
+		[nemoAnim addFrameWithImage:[playerSprites spriteImageAtCoords:CGPointMake(2, 0) ] delay:delay];
+		[nemoAnim addFrameWithImage:[playerSprites spriteImageAtCoords:CGPointMake(3, 0) ] delay:delay];
+		[nemoAnim addFrameWithImage:[playerSprites spriteImageAtCoords:CGPointMake(4, 0) ] delay:delay];
+		[nemoAnim addFrameWithImage:[playerSprites spriteImageAtCoords:CGPointMake(5, 0) ] delay:delay];
+		*/
+
+		[nemoSprites release];
+
 		// Release the sprtesheets we created as we no longer need them
 		[playerSprites release];
 		[ghostSprites release];
+
 
 	}
 	return self;
@@ -145,7 +164,8 @@
 	}
 	
 	[ghostAnim updateWithDelta:aDelta ];
-	[playerAnim updateWithDelta:aDelta ];
+	// [playerAnim updateWithDelta:aDelta ];
+	// [nemoAnim updateWithDelta:aDelta ];
 }
 
 - (void)renderScene
@@ -155,7 +175,8 @@
 	[myImage  renderCenteredAtPoint:CGPointMake(270, 430) ];
 	
 	[ghostAnim renderCenteredAtPoint:CGPointMake(50, 400)];
-	[playerAnim renderCenteredAtPoint:CGPointMake(270, 75 ) ];
+	// [playerAnim renderCenteredAtPoint:CGPointMake(270, 75 ) ];
+	// [nemoAnim renderCenteredAtPoint:CGPointMake(270, 75 ) ];
 	
 	[sharedImageRenderManager renderImages ];
 }
